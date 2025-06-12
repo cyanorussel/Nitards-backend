@@ -2,6 +2,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 
 // Fix __dirname for ES modules
 const __filename = fileURLToPath(import.meta.url);
@@ -34,6 +35,10 @@ cloudinary.config({
 });
 
 // Middlewares
+app.use(cors({
+  origin: ["http://localhost:3000", "https://nitards-frontend.vercel.app"],
+  credentials: true
+}));
 app.use(express.json({ limit: "50mb" })); // To parse JSON data in the req.body
 app.use(express.urlencoded({ extended: true })); // To parse form data in the req.body
 app.use(cookieParser());
