@@ -1,10 +1,15 @@
 import path from "path";
+import { fileURLToPath } from "url";
 import express from "express";
 import dotenv from "dotenv";
 
-const __dirname = path.resolve(); // <-- Move this up here
+// Fix __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.resolve(__dirname, './backend/.env') });
+// Use correct .env path (assuming .env is in the project root)
+dotenv.config({ path: path.resolve(__dirname, './.env') });
+
 import connectDB from "./db/connectDB.js";
 import cookieParser from "cookie-parser";
 import userRoutes from "./routes/userRoutes.js";
