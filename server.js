@@ -37,10 +37,10 @@ cloudinary.config({
 // Middlewares
 app.use(cors({
   origin: [
-    "https://nitards-frontend-jir7g1y0j-cyanorussels-projects.vercel.app",
+    "https://nitards-frontend-git-main-cyanorussels-projects.vercel.app",
     "http://localhost:3000",
     "https://nitards-frontend.vercel.app",
-    "https://nitards-frontend-fqh032s0o-cyanorussels-projects.vercel.app" // <-- Add this line
+    "https://nitards-frontend-cyanorussels-projects.vercel.app" // <-- Add this line
   ],
   credentials: true
 }));

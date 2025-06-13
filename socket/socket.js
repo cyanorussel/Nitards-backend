@@ -9,10 +9,10 @@ const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {
 		origin: [
-			"http://localhost:3000",
-			"https://nitards-frontend-jir7g1y0j-cyanorussels-projects.vercel.app",
-			"https://nitards-frontend.vercel.app",
-			"https://nitards-frontend-fqh032s0o-cyanorussels-projects.vercel.app"
+			 "https://nitards-frontend-git-main-cyanorussels-projects.vercel.app",
+    "http://localhost:3000",
+    "https://nitards-frontend.vercel.app",
+    "https://nitards-frontend-cyanorussels-projects.vercel.app"
 		],
 		credentials: true
 	},
