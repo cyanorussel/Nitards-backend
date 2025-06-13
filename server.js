@@ -36,7 +36,7 @@ cloudinary.config({
 
 // Middlewares
 app.use(cors({
-  origin: ["http://localhost:3000", "https://nitards-frontend.vercel.app"],
+  origin: [ "https://nitards-frontend.vercel.app"],
   credentials: true
 }));
 app.use(express.json({ limit: "50mb" })); // To parse JSON data in the req.body
